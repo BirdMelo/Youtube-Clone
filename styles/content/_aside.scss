@@ -1,0 +1,38 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+aside {
+    $aside_height:2.5rem;
+    $template-columns-repeats:60px;
+
+    display: grid;
+    grid-template-columns: repeat(2,$template-columns-repeats) auto repeat(2,$template-columns-repeats);
+    height: $aside_height;
+
+    position: absolute;
+    inset: auto 0 30px 0;
+    background: variables.$cl_dark_bg;
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        @include mixins.default_link();
+        height: $aside_height;
+        font-size: calc($aside_height*0.25);
+        img{
+            height: calc($aside_height*0.50);
+            width: calc($aside_height*0.50);
+        }
+        &:nth-child(3){
+            grid-area: 1/4;
+        }
+        &:nth-child(4){
+            grid-area: 1/5;
+            img{
+                border-radius: 100%;
+            }
+        }
+    }
+}

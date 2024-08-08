@@ -1,0 +1,19 @@
+@use './abstract/variables';
+@use './content/header';
+@use './content/navbar';
+@use './content/shorts';
+@use './content/videos';
+@use './content/aside';
+@use './content/footer';
+@use './content/responsiveness';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 10px 10px 70px 10px;
+    background: variables.$cl_dark_bg;
+    font-family: variables.$ft_text;
+    color: variables.$cl_dark_text;
+}

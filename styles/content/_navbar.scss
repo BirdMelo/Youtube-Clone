@@ -1,0 +1,29 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+nav{
+    margin-top: 15px;
+    $navBar_items_bg:variables.$cl_dark_secundary;
+    display: flex;
+    gap: 15px;
+    overflow: scroll;
+    align-items: center;
+    white-space: nowrap;
+
+    button{
+        all:unset;
+        background: $navBar_items_bg;
+        border-radius: 10px;
+        margin-right: 10px;
+        img{
+            width: 1.5rem;
+            padding: 5px 10px;
+        }
+    }
+    a{
+        @include mixins.default_link();
+        background: $navBar_items_bg;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}

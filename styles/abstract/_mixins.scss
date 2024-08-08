@@ -1,0 +1,6 @@
+@use './variables';
+
+@mixin default_link(){
+    text-decoration: none;
+    color: variables.$cl_dark_text;
+}
